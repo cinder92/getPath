@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.com.getPath" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>getPath</name>
+	<js-module name="getPath" src="www/getPath.js">
+		<clobbers target="cordova.plugins.getPath" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="getPath">
+				<param name="android-package" value="cordova.com.getPath.getPath" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+			 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+		</config-file><source-file src="src/android/getPath.java" target-dir="src/cordova/com/getPath/getPath" />
+	</platform>
+</plugin>
